@@ -1,4 +1,4 @@
-
+//add comment
 
 public class ByteUtil
 {
@@ -43,22 +43,22 @@ public class ByteUtil
         ret = (short) ((ret << 8) | (short) (in[offset + 0] & 0xff));
         return (ret);
     }
-    
-    
+
+
 	public static byte[] toByteArray(short value) {
 		byte[] Result = new byte[2];
 
         Result[0] = (byte) ((value >>> (8*0)) & 0xFF);
         Result[1] = (byte) ((value >>> (8*1)) & 0xFF);
-        
+
 		return Result;
 	}
 	/**
 	 * Converts an integer to a byte array
 	 * @param	value	an integer
 	 * @return	a byte array representing the integer
-	 */	
-	
+	 */
+
 	public static byte[] toByteArray(int value) {
 		byte[] Result = new byte[4];
 
@@ -66,18 +66,18 @@ public class ByteUtil
         Result[1] = (byte) ((value >>> (8*1)) & 0xFF);
         Result[2] = (byte) ((value >>> (8*2)) & 0xFF);
         Result[3] = (byte) ((value >>> (8*3)) & 0xFF);
-        
+
 		return Result;
 	}
 
-	
-	
+
+
 	/**
 	 * Converts a long to a byte array
 	 * @param	longvalue	a long integer
 	 * @return	a byte array representing the long integer
-	 */	
-	public static byte[] toByteArray(long value) {	
+	 */
+	public static byte[] toByteArray(long value) {
 		byte[] Result = new byte[8];
 
         Result[0] = (byte) ((value >>> (8*0)) & 0xFF);
@@ -88,7 +88,7 @@ public class ByteUtil
         Result[5] = (byte) ((value >>> (8*5)) & 0xFF);
         Result[6] = (byte) ((value >>> (8*6)) & 0xFF);
         Result[7] = (byte) ((value >>> (8*7)) & 0xFF);
-        
+
 		return Result;
 	}
     public static int posDiffInFt(double lat1, double lat2, double lon1,
@@ -104,7 +104,7 @@ public class ByteUtil
         // Return hypotenouse in feet
         return ((int) Math.sqrt(ftlat * ftlat + ftlon * ftlon));
     }
-    
+
     /**
      * Reverses the contents of the byte array (BYTE ORDER)
      * @param buffer - a byte array
